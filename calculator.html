@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/body_and_page.css" rel="stylesheet">
+    <link href="styles/grid_calculator.css" rel="stylesheet">
+    <link href="styles/buttons_calculator.css" rel="stylesheet">
+    <link href="styles/output.css" rel="stylesheet">
+    <script src="scripts/calculator.js" defer></script>
+    <script src="http://code.jquery.com/jquery-1.6.4.js"></script>
+    <script src="https://css-tricks.com/examples/HorzScrolling/jquery.mousewheel.js"></script>
+    <script>
+    $(function() {
+        $(".result-operations, .current-operations").mousewheel(function(event, delta) {
+            this.scrollLeft -= (delta * 80);
+            this.scrollRight -= (delta * 80);
+            event.preventDefault();
+        });
+    });
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="grid-calculator">
+        <div class="output">
+            <div current-screen class="current-operations"></div>
+            <div result-screen class="result-operations" id="hi"></div>
+        </div>
+        <button data-clear-all class="two-span">AC</button>
+        <button data-del>DEL</button>
+        <button data-operations value="*">÷</button>
+        <button data-numbers>1</button>
+        <button data-numbers>2</button>
+        <button data-numbers>3</button>
+        <button data-operations value="*">x</button>
+        <button data-numbers>4</button>
+        <button data-numbers>5</button>
+        <button data-numbers>6</button>
+        <button data-operations>+</button>
+        <button data-numbers>7</button>
+        <button data-numbers>8</button>
+        <button data-numbers>9</button>
+        <button data-operations>-</button>
+        <button data-operations>.</button>
+        <button data-numbers>0</button>
+        <button data-equal class="two-span">=</button>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+.grid-calculator > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.grid-calculator > button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.two-span {
+    grid-column: span 2;
+}
